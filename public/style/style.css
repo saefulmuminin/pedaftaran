@@ -1,0 +1,18 @@
+
+.text-teal {
+    color: #0d9488; /* Teal-500 */
+}
+.btun-teal {
+    background-color: #0d9488; /* Teal-500 */
+    border-color: #0d9488;
+}
+.btun-teal:hover {
+    background-color: #115e59; /* Teal-700 */
+    border-color: #115e59;
+}
+
+.bg-teal {
+    background-color: #0d9488; /* teal 500 color */
+}
+
+
