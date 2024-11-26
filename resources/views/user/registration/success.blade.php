@@ -10,7 +10,7 @@
                     <h3 class="mb-3 text-success">Pendaftaran Berhasil</h3>
                     <p class="lead mb-4">Terima kasih telah mendaftar! Silakan klik tombol di bawah untuk konfirmasi lebih lanjut.</p>
                     <!-- Tombol WhatsApp -->
-                    <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-success btn-lg mt-3">Konfirmasi</a>
+                    <a href="https://wa.me/+6281385260050" target="_blank" class="btn btn-success btn-lg mt-3">Konfirmasi</a>
                 </div>
             </div>
 

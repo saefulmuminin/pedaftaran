@@ -15,6 +15,10 @@ use App\Http\Controllers\Admin\UserController;
 |
 */
 
+Route::get('/error-test', function () {
+    abort(500);
+});
+
 Route::get('/', function () {
     return view('layouts.user');
 });
