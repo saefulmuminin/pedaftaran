@@ -13,39 +13,64 @@
                         <form action="{{ route('registration.store') }}" method="POST">
                             @csrf
 
+                            <!-- Input Nama Lengkap -->
                             <div class="mb-4">
                                 <label for="name" class="form-label text-white">Nama Lengkap</label>
-                                <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" required>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    class="form-control @error('name') is-invalid @enderror"
+                                    value="{{ old('name') }}"
+                                    placeholder="Masukkan nama lengkap"
+                                    aria-describedby="nameHelp"
+                                    required>
                                 @error('name')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
 
+                            <!-- Input Nomor Telepon/WA -->
                             <div class="mb-4">
                                 <label for="phone" class="form-label text-white">Nomor Telepon/WA</label>
-                                <input type="text" name="phone" id="phone" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" required>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    class="form-control @error('phone') is-invalid @enderror"
+                                    value="{{ old('phone') }}"
+                                    placeholder="Contoh: 08123456789"
+                                    aria-describedby="phoneHelp"
+                                    required>
+                                <small id="phoneHelp" class="form-text text-white">
+                                    Masukkan nomor telepon yang valid dan terhubung dengan WhatsApp.
+                                </small>
                                 @error('phone')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
 
+                            <!-- Pilih Jenjang Pendidikan -->
                             <div class="mb-4">
                                 <label for="education_level" class="form-label text-white">Jenjang Pendidikan</label>
-                                <select name="education_level" id="education_level" class="form-select @error('education_level') is-invalid @enderror" required>
+                                <select
+                                    name="education_level"
+                                    id="education_level"
+                                    class="form-select @error('education_level') is-invalid @enderror"
+                                    aria-describedby="educationLevelHelp"
+                                    required>
                                     <option value="">Pilih Jenjang Pendidikan</option>
-                                    <option value="MTs" {{ old('education_level') === 'MTs' ? 'selected' : '' }}>MTs</option>
-                                    <option value="SMP" {{ old('education_level') === 'SMP' ? 'selected' : '' }}>SMP</option>
-                                    <option value="SMK" {{ old('education_level') === 'SMK' ? 'selected' : '' }}>SMK</option>
-                                    <option value="SMA" {{ old('education_level') === 'SMA' ? 'selected' : '' }}>SMA</option>
-                                    <option value="Madrasah Aliyah" {{ old('education_level') === 'Madrasah Aliyah' ? 'selected' : '' }}>Madrasah Aliyah</option>
+                                    <option value="Farmasi Klinis dan Komunitas" {{ old('education_level') === 'Farmasi Klinis dan Komunitas' ? 'selected' : '' }}>Farmasi Klinis dan Komunitas</option>
+                                    <option value="Desain Komunikasi Visual (DKV)" {{ old('education_level') === 'Desain Komunikasi Visual (DKV)' ? 'selected' : '' }}>Desain Komunikasi Visual (DKV)</option>
                                 </select>
                                 @error('education_level')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
 
+                            <!-- Tombol Submit -->
                             <div class="d-flex justify-content-center mt-4">
-                                <button type="submit" class="btn btn-dark px-5 py-2 rounded-lg shadow-lg">Daftar Sekarang</button>
+                                <button type="submit" class="btn btn-light px-5 py-2 rounded-lg shadow-lg">Daftar Sekarang</button>
                             </div>
                         </form>
                     </div>

@@ -11,6 +11,16 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- Additional CSS for Hover Effect -->
 <style>
+     .carousel-img {
+              height: 600px; /* Sesuaikan tinggi sesuai kebutuhan */
+              object-fit: cover; /* Memastikan gambar dipotong dengan rapi */
+            }
+
+            @media (max-width: 768px) {
+              .carousel-img {
+                height: 300px; /* Tinggi lebih kecil untuk layar kecil */
+              }
+            }
     .position-relative:hover .overlay {
         visibility: visible;
         opacity: 1;
@@ -87,7 +97,33 @@
             </div>
         </section>
 
-
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{ asset('img/DSC_0021.JPG') }}" class="d-block w-100 carousel-img" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ asset('img/DSC_0010.JPG') }}" class="d-block w-100 carousel-img" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ asset('img/Desain tanpa judul (4).png') }}" class="d-block w-100 carousel-img" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ asset('img/PERPHOTOAN.jpg') }}" class="d-block w-100 carousel-img" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{ asset('img/IMG_3112.JPG') }}" class="d-block w-100 carousel-img" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         <section class="container py-5" id="tentang">
             <div class="row align-items-center">
                 <!-- Accordion -->
@@ -188,11 +224,6 @@
                 <!-- Tombol Daftar Sekarang -->
                 <a href="{{ route('Daftar-Siswa-SMKIT-AL-MUSTHAFAWIYAH') }}" class="btn btn-light btn-lg px-4 py-2 text-decoration-none">
                     Daftar Sekarang
-                </a>
-
-                <!-- Tombol Hubungi Kami -->
-                <a href="https://wa.me/+6281385260050" class="btn btn-outline-light btn-lg px-4 py-2">
-                    Hubungi Kami
                 </a>
             </div>
         </section>

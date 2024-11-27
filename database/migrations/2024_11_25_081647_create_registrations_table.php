@@ -11,7 +11,8 @@ class CreateRegistrationsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('phone');
-            $table->enum('education_level', ['MTs', 'SMP', 'SMK', 'SMA', 'Madrasah Aliyah']);
+            $table->enum('education_level', ['Farmasi Klinis dan Komunitas', 'Desain Komunikasi Visual (DKV)
+']);
             $table->timestamps();
         });
     }
